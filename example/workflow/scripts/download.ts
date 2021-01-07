@@ -26,6 +26,6 @@ const classifier = "glsp";
 console.log("Downloading latest version of the Workflow Example Java Server from the maven repository...");
 download({ groupId, artifactId, version, classifier, isSnapShot: true }, downloadDir, mavenRepository)
     .then(() => console.log("Download completed. Start the server using this command: \njava -jar org.eclipse.glsp.example.workflow-"
-        + version + "-SNAPSHOT-glsp.jar org.eclipse.glsp.example.workflow.launch.ExampleServerLauncher --port=8081 --websocket\n\n"
+        + version + "-SNAPSHOT-glsp.jar org.eclipse.glsp.example.workflow.launch.ExampleServerLauncher\n\n"
         + "After starting the server, launch the VS Code extension by opening this repository in VSCode and executing the \"Workflow GLSP Example Extension\" launch configuration, provided with this project"
     ));
