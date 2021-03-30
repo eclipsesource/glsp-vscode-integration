@@ -30,17 +30,20 @@
       {
         "command": "workflow.glsp.diagram.fit",
         "title": "Fit to Screen",
-        "category": "Workflow Diagram"
+        "category": "Workflow Diagram",
+        "enablement": "glsp-workflow-diagram-focused"
       },
       {
-        "command": "workflow.diagram.diagram.center",
+        "command": "workflow.glsp.diagram.center",
         "title": "Center selection",
-        "category": "Workflow Diagram"
+        "category": "Workflow Diagram",
+        "enablement": "glsp-workflow-diagram-focused"
       },
       {
-        "command": "workflow.diagram.diagram.delete",
-        "title": "Delete selected element",
-        "category": "Workflow Diagram"
+        "command": "workflow.glsp.diagram.layout",
+        "title": "Layout diagram",
+        "category": "Workflow Diagram",
+        "enablement": "glsp-workflow-diagram-focused"
       }
     ],
     "keybindings": [
@@ -54,6 +57,12 @@
         "key": "alt+c",
         "mac": "alt+c",
         "command": "workflow.glsp.diagram.center",
+        "when": "glsp-workflow-diagram-focused"
+      },
+      {
+        "key": "alt+l",
+        "mac": "alt+l",
+        "command": "workflow.glsp.diagram.layout",
         "when": "glsp-workflow-diagram-focused"
       }
     ]

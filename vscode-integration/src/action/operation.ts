@@ -36,3 +36,13 @@ export class DeleteElementOperation implements Operation {
     }
 }
 
+export class LayoutOperation implements Operation {
+    static readonly KIND = 'layout';
+    constructor(readonly elementIds: string[] = [], readonly kind = LayoutOperation.KIND) {
+    }
+
+    static is(action?: Action): action is LayoutOperation {
+        return action !== undefined && action.kind === LayoutOperation.KIND
+            && 'elementIds' in action;
+    }
+}

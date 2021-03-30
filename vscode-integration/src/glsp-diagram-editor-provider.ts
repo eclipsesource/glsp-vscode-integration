@@ -16,7 +16,7 @@
 import { SprottyDiagramIdentifier } from 'sprotty-vscode-protocol';
 import * as vscode from 'vscode';
 
-import { CenterAction, FitToScreenAction } from './action';
+import { CenterAction, FitToScreenAction, LayoutOperation } from './action';
 import { GLSPCommand } from './glsp-commands';
 import { GlspDiagramDocument } from './glsp-diagram-document';
 import { GlspDiagramEditorContext } from './glsp-diagram-editor-context';
@@ -51,6 +51,12 @@ export class GlspDiagramEditorProvider implements vscode.CustomEditorProvider<Gl
         GLSPCommand.registerActionCommand({
             action: new CenterAction([]),
             command: GLSPCommand.CENTER,
+            ...options
+        });
+
+        GLSPCommand.registerActionCommand({
+            action: new LayoutOperation(),
+            command: GLSPCommand.LAYOUT,
             ...options
         });
     }

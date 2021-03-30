@@ -31,6 +31,7 @@ export namespace GLSPCommand {
     export const FIT_TO_SCREEN = 'fit';
     export const CENTER = 'center';
     export const DELETE = 'delete';
+    export const LAYOUT = 'layout';
 
     export function commandId(extensionPrefix: string, commandKey: string): string {
         return `${extensionPrefix}.${GLSP_DIAGRAM_COMMAND_IDENTIFER}.${commandKey}`;
