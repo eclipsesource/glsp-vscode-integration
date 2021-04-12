@@ -1,3 +1,4 @@
+# **!!! This repository is discontinued. This project has moved to [eclipse-glsp](https://github.com/eclipse-glsp/glsp) and will be maintained there !!!**
 # Eclipse GLSP VSCode Integration
 
 This project contains the glue code necessary to diagram editors built with the [graphical language server platform (GLSP)](https://github.com/eclipse-glsp/glsp) with VSCode, as well as an example VSCode extension for the workflow diagram example for testing purposes.
